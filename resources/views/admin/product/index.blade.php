@@ -17,14 +17,26 @@
         <span>{{$errors->first('name')}}</span>
         <br>
         <label for="">Price</label>
-        <input type="text" name="price">
+        <input type="number" name="price">
         <span>{{$errors->first('price')}}</span>
         <br>
-        <label for="">Image</label>
+        <label for="">Main Image</label>
         <input type="file" name="image">
         <span>{{$errors->first('image')}}</span>
         <br>
-        <button type="submit">Submit</button>
+
+
+        @for ($i=1; $i<=5; $i++) <label for="">Product Image {{$i}}</label>
+            <input type="file" name="productimage{{$i}}">
+            <br>
+            @endfor
+
+
+
+
+
+
+            <button type="submit">Submit</button>
 
     </form>
 
